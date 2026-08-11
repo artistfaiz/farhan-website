@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Farhan ki Website</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            background-color: lightblue;
+            text-align: center;
+            font-family: Arial;
+            margin: 0;
+        }
+
+        nav {
+            background-color: darkblue;
+            padding: 15px;
+        }
+
+        nav a {
+            color: white;
+            margin: 15px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        h1, h2 {
+            color: darkblue;
+        }
+
+        button {
+            background-color: darkblue;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .hero, .about-card, .skills, .contact-box, .social-box {
+            background-color: white;
+            margin: 40px auto;
+            padding: 35px;
+            border-radius: 20px;
+            max-width: 700px;
+        }
+
+        .hero h2 {
+            font-size: 32px;
+        }
+
+        .hero p {
+            font-size: 20px;
+        }
+
+        .about-card img {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .about-card p {
+            font-size: 18px;
+        }
+
+        .skill-box {
+            text-align: left;
+            margin: 20px 0;
+        }
+
+        .skill-name {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 7px;
+        }
+
+        .progress {
+            background-color: lightgray;
+            border-radius: 20px;
+            height: 25px;
+            overflow: hidden;
+        }
+
+        .html-bar {
+            background-color: darkblue;
+            width: 90%;
+            height: 100%;
+        }
+
+        .css-bar {
+            background-color: darkblue;
+            width: 80%;
+            height: 100%;
+        }
+
+        .js-bar {
+            background-color: darkblue;
+            width: 60%;
+            height: 100%;
+        }
+
+        .web-bar {
+            background-color: darkblue;
+            width: 70%;
+            height: 100%;
+        }
+
+        .social-button {
+            display: inline-block;
+            background-color: darkblue;
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            margin: 8px;
+            border-radius: 8px;
+        }
+
+        input, textarea {
+            width: 90%;
+            padding: 12px;
+            margin: 8px;
+            border: 1px solid gray;
+            border-radius: 6px;
+            box-sizing: border-box;
+            font-size: 15px;
+        }
+
+        textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        #contactResult {
+            color: darkblue;
+            font-weight: bold;
+        }
+
+        footer {
+            background-color: darkblue;
+            color: white;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 600px) {
+
+            nav a {
+                display: block;
+                margin: 10px;
+            }
+
+            .hero, .about-card, .skills,
+            .contact-box, .social-box {
+                margin: 20px 10px;
+                padding: 25px 15px;
+            }
+
+            .hero h2 {
+                font-size: 25px;
+            }
+
+            .about-card img {
+                width: 200px;
+                height: 200px;
+            }
+
+            input, textarea {
+                width: 95%;
+            }
+
+            .social-button {
+                display: block;
+                margin: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#social">Social</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="hero">
+
+        <h1>Farhan ki Website</h1>
+
+        <h2>Welcome to My Website!</h2>
+
+        <p>
+            Main Farhan hoon aur main web development seekh raha hoon.
+        </p>
+
+        <button onclick="welcomeMessage()">
+            Explore My Website
+        </button>
+
+        <p id="welcomeResult"></p>
+
+    </div>
+
+    <div class="about-card" id="about">
+
+        <h2>About Me</h2>
+
+        <img src="photo.png">
+
+        <p>
+            Mera naam Farhan hai. Main website banana seekh raha hoon.
+        </p>
+
+        <p>
+            Mujhe coding aur technology seekhna pasand hai.
+        </p>
+
+        <input id="name" type="text" placeholder="Apna naam">
+
+        <button onclick="showName()">Click Me</button>
+
+        <p id="result"></p>
+
+    </div>
+
+    <div class="skills" id="skills">
+
+        <h2>My Skills</h2>
+
+        <div class="skill-box">
+            <div class="skill-name">HTML - 90%</div>
+            <div class="progress">
+                <div class="html-bar"></div>
+            </div>
+        </div>
+
+        <div class="skill-box">
+            <div class="skill-name">CSS - 80%</div>
+            <div class="progress">
+                <div class="css-bar"></div>
+            </div>
+        </div>
+
+        <div class="skill-box">
+            <div class="skill-name">JavaScript - 60%</div>
+            <div class="progress">
+                <div class="js-bar"></div>
+            </div>
+        </div>
+
+        <div class="skill-box">
+            <div class="skill-name">Web Development - 70%</div>
+            <div class="progress">
+                <div class="web-bar"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="social-box" id="social">
+
+        <h2>My Social Media</h2>
+
+        <p>Follow me on social media</p>
+
+        <a class="social-button" href="#">Instagram</a>
+
+        <a class="social-button" href="#">YouTube</a>
+
+        <a class="social-button" href="#">Facebook</a>
+
+    </div>
+
+    <div class="contact-box" id="contact">
+
+        <h2>Contact Me</h2>
+
+        <p>Aap mujhe message bhej sakte hain.</p>
+
+        <form onsubmit="sendMessage(event)">
+
+            <input id="contactName"
+                   type="text"
+                   placeholder="Apna naam"
+                   required>
+
+            <input id="email"
+                   type="email"
+                   placeholder="Apni email"
+                   required>
+
+            <textarea id="message"
+                      placeholder="Apna message"
+                      required></textarea>
+
+            <br>
+
+            <button type="submit">
+                Send Message
+            </button>
+
+        </form>
+
+        <p id="contactResult"></p>
+
+    </div>
+
+    <footer>
+        <p>© 2026 Farhan ki Website</p>
+    </footer>
+
+    <script>
+
+        function welcomeMessage() {
+            document.getElementById("welcomeResult").innerHTML =
+                "Welcome Farhan! Let's explore!";
+        }
+
+        function showName() {
+            let name = document.getElementById("name").value;
+
+            document.getElementById("result").innerHTML =
+                "Hello " + name;
+        }
+
+        function sendMessage(event) {
+            event.preventDefault();
+
+            let name =
+                document.getElementById("contactName").value;
+
+            document.getElementById("contactResult").innerHTML =
+                "Thank you, " + name +
+                "! Your message has been received.";
+        }
+
+    </script>
+
+</body>
+</html>
