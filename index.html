@@ -471,15 +471,21 @@ footer {
         }
 
         function sendMessage(event) {
-            event.preventDefault();
+    event.preventDefault();
 
-            let name =
-                document.getElementById("contactName").value;
+    let name = document.getElementById("contactName").value;
+    let message = document.getElementById("message").value;
 
-            document.getElementById("contactResult").innerHTML =
-                "Thank you, " + name +
-                "! Your message has been received.";
-        }
+    let whatsappMessage =
+        "Hello Farhan,%0A%0A" +
+        "Name: " + encodeURIComponent(name) + "%0A" +
+        "Message: " + encodeURIComponent(message);
+
+    let whatsappURL =
+        "https://wa.me/919942534216?text=" + whatsappMessage;
+
+    window.open(whatsappURL, "_blank");
+}
 
     </script>
 
