@@ -165,10 +165,56 @@ button:hover {
     width: 60%;
 }
 
+
+}
 .web-bar {
     width: 70%;
 }
 
+/* Projects */
+.project-card {
+    background: #0f172a;
+    margin: 25px 0;
+    padding: 30px;
+    border-radius: 16px;
+    border: 1px solid #334155;
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    border-color: #38bdf8;
+    box-shadow: 0 10px 30px rgba(56, 189, 248, 0.15);
+}
+
+.project-card h3 {
+    color: #38bdf8;
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.project-card p {
+    color: #cbd5e1;
+    margin-bottom: 20px;
+}
+
+.project-button {
+    display: inline-block;
+    background: linear-gradient(135deg, #2563eb, #06b6d4);
+    color: white;
+    text-decoration: none;
+    padding: 11px 22px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.project-button:hover {
+    transform: translateY(-3px);
+}
+
+/* Social Media */
+.social-button {
 /* Social Media */
 .social-button {
     display: inline-block;
@@ -280,15 +326,24 @@ footer {
     <section id="projects">
     <h2>My Projects</h2>
 
-    <div>
-        <h3>My Personal Website</h3>
-        <p>Ye meri pehli personal website hai jo maine HTML, CSS aur JavaScript se banayi hai.</p>
-    </div>
+  <div class="project-card">
+    <h3>🌐 My Personal Website</h3>
+    <p>
+        Ye meri personal portfolio website hai jo maine
+        HTML, CSS aur JavaScript se banayi hai.
+    </p>
+    <a class="project-button" href="#home">View Website</a>
+</div>
 
-    <div>
-        <h3>My Future Project</h3>
-        <p>Yahan main apna agla web development project add karunga.</p>
-    </div>
+<div class="project-card">
+    <h3>🚀 My Future Project</h3>
+    <p>
+        Yahan main apna next web development project
+        add karunga.
+    </p>
+    <a class="project-button" href="#contact">Contact Me</a>
+</div>
+        
 </section>
 
 
