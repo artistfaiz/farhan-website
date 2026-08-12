@@ -6,176 +6,273 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
-        body {
-            background-color: lightblue;
-            text-align: center;
-            font-family: Arial;
-            margin: 0;
-        }
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-        nav {
-            background-color: darkblue;
-            padding: 15px;
-        }
+html {
+    scroll-behavior: smooth;
+}
 
-        nav a {
-            color: white;
-            margin: 15px;
-            text-decoration: none;
-            font-size: 18px;
-        }
+body {
+    background: #0f172a;
+    color: #e2e8f0;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
 
-        h1, h2 {
-            color: darkblue;
-        }
+/* Navigation */
+nav {
+    background: rgba(15, 23, 42, 0.95);
+    padding: 18px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #334155;
+}
 
-        button {
-            background-color: darkblue;
-            color: white;
-            padding: 12px 25px;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 16px;
-        }
+nav a {
+    color: #f8fafc;
+    margin: 0 18px;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bold;
+    transition: 0.3s;
+}
 
-        .hero, .about-card, .skills, .contact-box, .social-box {
-            background-color: white;
-            margin: 40px auto;
-            padding: 35px;
-            border-radius: 20px;
-            max-width: 700px;
-        }
+nav a:hover {
+    color: #38bdf8;
+}
 
-        .hero h2 {
-            font-size: 32px;
-        }
+/* Main headings */
+h1,
+h2 {
+    color: #38bdf8;
+}
 
-        .hero p {
-            font-size: 20px;
-        }
+h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
 
-        .about-card img {
-            width: 250px;
-            height: 250px;
-            object-fit: cover;
-            border-radius: 50%;
-        }
+h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
 
-        .about-card p {
-            font-size: 18px;
-        }
+/* Buttons */
+button {
+    background: linear-gradient(135deg, #2563eb, #06b6d4);
+    color: white;
+    padding: 13px 28px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s;
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+}
 
-        .skill-box {
-            text-align: left;
-            margin: 20px 0;
-        }
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(6, 182, 212, 0.35);
+}
 
-        .skill-name {
-            font-size: 18px;
-            font-weight: bold;
-            margin-bottom: 7px;
-        }
+/* All sections */
+.hero,
+.about-card,
+.skills,
+.contact-box,
+.social-box {
+    background: #1e293b;
+    margin: 40px auto;
+    padding: 45px 35px;
+    border-radius: 20px;
+    max-width: 800px;
+    border: 1px solid #334155;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
 
-        .progress {
-            background-color: lightgray;
-            border-radius: 20px;
-            height: 25px;
-            overflow: hidden;
-        }
+/* Hero */
+.hero h2 {
+    font-size: 36px;
+}
 
-        .html-bar {
-            background-color: darkblue;
-            width: 90%;
-            height: 100%;
-        }
+.hero p {
+    font-size: 19px;
+    color: #cbd5e1;
+    margin-bottom: 25px;
+}
 
-        .css-bar {
-            background-color: darkblue;
-            width: 80%;
-            height: 100%;
-        }
+/* About */
+.about-card img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #38bdf8;
+    box-shadow: 0 0 30px rgba(56, 189, 248, 0.35);
+    margin-bottom: 20px;
+}
 
-        .js-bar {
-            background-color: darkblue;
-            width: 60%;
-            height: 100%;
-        }
+.about-card p {
+    font-size: 18px;
+    color: #cbd5e1;
+}
 
-        .web-bar {
-            background-color: darkblue;
-            width: 70%;
-            height: 100%;
-        }
+/* Skills */
+.skill-box {
+    text-align: left;
+    margin: 25px 0;
+}
 
-        .social-button {
-            display: inline-block;
-            background-color: darkblue;
-            color: white;
-            text-decoration: none;
-            padding: 12px 20px;
-            margin: 8px;
-            border-radius: 8px;
-        }
+.skill-name {
+    font-size: 17px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #f8fafc;
+}
 
-        input, textarea {
-            width: 90%;
-            padding: 12px;
-            margin: 8px;
-            border: 1px solid gray;
-            border-radius: 6px;
-            box-sizing: border-box;
-            font-size: 15px;
-        }
+.progress {
+    background: #334155;
+    border-radius: 20px;
+    height: 14px;
+    overflow: hidden;
+}
 
-        textarea {
-            height: 120px;
-            resize: vertical;
-        }
+.html-bar,
+.css-bar,
+.js-bar,
+.web-bar {
+    background: linear-gradient(90deg, #2563eb, #06b6d4);
+    height: 100%;
+    border-radius: 20px;
+}
 
-        #contactResult {
-            color: darkblue;
-            font-weight: bold;
-        }
+.html-bar {
+    width: 90%;
+}
 
-        footer {
-            background-color: darkblue;
-            color: white;
-            padding: 20px;
-            margin-top: 40px;
-        }
+.css-bar {
+    width: 80%;
+}
 
-        @media (max-width: 600px) {
+.js-bar {
+    width: 60%;
+}
 
-            nav a {
-                display: block;
-                margin: 10px;
-            }
+.web-bar {
+    width: 70%;
+}
 
-            .hero, .about-card, .skills,
-            .contact-box, .social-box {
-                margin: 20px 10px;
-                padding: 25px 15px;
-            }
+/* Social Media */
+.social-button {
+    display: inline-block;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    padding: 13px 24px;
+    margin: 8px;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.3s;
+}
 
-            .hero h2 {
-                font-size: 25px;
-            }
+.social-button:hover {
+    background: #06b6d4;
+    transform: translateY(-3px);
+}
 
-            .about-card img {
-                width: 200px;
-                height: 200px;
-            }
+/* Contact */
+input,
+textarea {
+    width: 90%;
+    padding: 14px;
+    margin: 10px;
+    border: 1px solid #475569;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 15px;
+    background: #0f172a;
+    color: white;
+    outline: none;
+}
 
-            input, textarea {
-                width: 95%;
-            }
+input:focus,
+textarea:focus {
+    border-color: #38bdf8;
+    box-shadow: 0 0 10px rgba(56, 189, 248, 0.2);
+}
 
-            .social-button {
-                display: block;
-                margin: 10px;
-            }
-        }
+textarea {
+    height: 130px;
+    resize: vertical;
+}
+
+#contactResult {
+    color: #38bdf8;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    background: #020617;
+    color: #94a3b8;
+    padding: 25px;
+    margin-top: 50px;
+    border-top: 1px solid #334155;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+
+    nav a {
+        display: inline-block;
+        margin: 6px;
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    .hero,
+    .about-card,
+    .skills,
+    .contact-box,
+    .social-box {
+        margin: 25px 10px;
+        padding: 30px 15px;
+    }
+
+    .hero h2 {
+        font-size: 28px;
+    }
+
+    .about-card img {
+        width: 200px;
+        height: 200px;
+    }
+
+    input,
+    textarea {
+        width: 95%;
+    }
+
+    .social-button {
+        display: block;
+        margin: 12px auto;
+        max-width: 220px;
+    }
+}
     </style>
 </head>
 <body>
